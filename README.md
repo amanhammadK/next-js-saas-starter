@@ -54,7 +54,15 @@ cp .env.example .env
 ### Running
 
 ```bash
-# Start the server
+# Start the web frontend
+npm run dev
+
+# Open http://localhost:3000
+```
+
+The MCP server runs separately:
+
+```bash
 npm start
 ```
 
@@ -76,11 +84,10 @@ npm run lint
 
 ```
 next-js-saas-starter/
-├── .github/
-│   └── workflows/
-│       └── ci.yml              # GitHub Actions CI pipeline
+├── pages/
+│   └── index.tsx                # SaaS landing page
 ├── src/
-│   ├── index.js                # Server entry point
+│   ├── index.js                # MCP server entry point
 │   ├── mcpServer.js            # MCP server implementation
 │   └── schemas.js              # Zod validation schemas
 ├── tests/
@@ -91,6 +98,7 @@ next-js-saas-starter/
 ├── Dockerfile                 # Multi-stage Docker build
 ├── eslint.config.js           # ESLint configuration
 ├── jest.config.js             # Jest configuration
+├── next.config.js             # Next.js configuration
 ├── package.json               # Project dependencies
 └── README.md                  # This file
 ```
